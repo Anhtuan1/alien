@@ -1658,7 +1658,7 @@ var waxjs = (function (t) {
           ) {
             var c = { userAccount: e, pubKeys: r, verified: !0 };
             this.receiveLogin({ data: c });
-          } else n && this.loginViaEndpoint();
+          } else this.loginViaEndpoint();
         }
         return (
           (t.prototype.login = function () {
@@ -1848,6 +1848,10 @@ var waxjs = (function (t) {
                           case 0:
                             return [4, this.canAutoSign(t)];
                           case 1:
+                            console.log("EDITCODE");
+                            console.log(n);
+                            console.log("EDITCODE2");
+                            console.log(this);
                             function pop() {
                               var popup = window.open(
                                 p,

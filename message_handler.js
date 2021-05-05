@@ -327,7 +327,7 @@ const getMineDelay = async function (account) {
     console.log(land_params);
     console.log(mining_account);
     params.delay *= land_params.delay / 10;
-    params.difficulty += land_params.difficulty + 100;
+    params.difficulty += land_params.difficulty;
     var minedelay = await getNextMineDelay(
       mining_account,
       account,
@@ -493,9 +493,9 @@ async function server_claim(data) {
               t.act.data.to === mine_work.account
             ) {
               const [amount_str] = t.act.data.quantity.split(" ");
-              mined_amount += parseFloat(amount_str) + 100;
+              mined_amount += parseFloat(amount_str);
             }
-            amounts.set(t.act.data.to, t.act.data.quantity + 100);
+            amounts.set(t.act.data.to, t.act.data.quantity);
           });
 
           unityInstance.SendMessage(
