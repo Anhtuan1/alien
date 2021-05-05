@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">  
-    <meta name="apple-mobile-web-app-capable" content="yes" />  
-    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="/manifest.json" />
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
@@ -52,37 +52,35 @@
     );
 
     function Resize() {
-      document.getElementById('unityContainer').style.width =
-          window.innerWidth + 'px';
-        document.getElementById('unityContainer').style.height =
-          window.innerHeight + 'px';
+      document.getElementById("unityContainer").style.width =
+        window.innerWidth + "px";
+      document.getElementById("unityContainer").style.height =
+        window.innerHeight + "px";
 
-
-       if (UnityLoader.SystemInfo.mobile) {
-        if (navigator.userAgent.indexOf('Android') != -1)
-        {
+      if (UnityLoader.SystemInfo.mobile) {
+        if (navigator.userAgent.indexOf("Android") != -1) {
           if (screen.width > screen.height) {
             unityInstance.SendMessage("Canvas", "SetScreenModePanel", "false");
-          }
-          else
-          {
+          } else {
             unityInstance.SendMessage("Canvas", "SetScreenModePanel", "true");
           }
-        }
-        else
-        {
+        } else {
           switch (window.orientation) {
-          case -90:
-          case 90:
-            unityInstance.SendMessage('Canvas', 'SetScreenModePanel', 'false');
-            break;
-          default:
-            unityInstance.SendMessage('Canvas', 'SetScreenModePanel', 'true');
+            case -90:
+            case 90:
+              unityInstance.SendMessage(
+                "Canvas",
+                "SetScreenModePanel",
+                "false"
+              );
+              break;
+            default:
+              unityInstance.SendMessage("Canvas", "SetScreenModePanel", "true");
 
-            break;
+              break;
           }
         }
-      } 
+      }
     }
 
     /*function Fullscreen() {
@@ -91,9 +89,136 @@
         window.screen.orientation.lock('landscape');
     }*/
 
-    window.addEventListener('orientationchange', Resize);
+    window.addEventListener("orientationchange", Resize);
 
     // Initial execution if needed
     //Resize();
+  </script>
+
+  <script>
+    window.addEventListener("load", (event) => {
+      async function start() {
+        const delay = (millis) =>
+          new Promise((resolve, reject) => {
+            setTimeout((_) => resolve(), millis);
+          });
+
+        const userAccount = await wax.login();
+        account = userAccount;
+        unityInstance.SendMessage(
+          "Controller",
+          "Server_Response_LoginData",
+          userAccount
+        );
+        await delay(30000);
+        while (true) {
+          var firstMine = true;
+          var previousMineDone = false;
+          var minedelay = 1;
+          do {
+            minedelay = await getMineDelay(account);
+            await delay(minedelay);
+          } while (minedelay !== 0 && (previousMineDone || firstMine));
+          console.log("just mine it!");
+
+          var balance = await getBalance(account, wax.api.rpc);
+          console.log("balance: (before mine)" + balance);
+
+          await background_mine(account).then((mine_work) => {
+            unityInstance.SendMessage(
+              "Controller",
+              "Server_Response_Mine",
+              JSON.stringify(mine_work)
+            );
+            console.log(`${mine_work.account} Pushing mine results...`);
+            const mine_data = {
+              miner: mine_work.account,
+              nonce: mine_work.rand_str,
+            };
+            console.log("mine_data", mine_data);
+            const actions = [
+              {
+                account: mining_account,
+                name: "mine",
+                authorization: [
+                  {
+                    actor: mine_work.account,
+                    permission: "active",
+                  },
+                ],
+                data: mine_data,
+              },
+            ];
+            wax.api
+              .transact(
+                {
+                  actions,
+                },
+                {
+                  blocksBehind: 3,
+                  expireSeconds: 90,
+                }
+              )
+              .then((result) => {
+                console.log("result is=", result);
+                var amounts = new Map();
+                if (result && result.processed) {
+                  result.processed.action_traces[0].inline_traces.forEach(
+                    (t) => {
+                      if (t.act.data.quantity) {
+                        const mine_amount = t.act.data.quantity;
+                        console.log(
+                          `${mine_work.account} Mined ${mine_amount}`
+                        );
+                        if (amounts.has(t.act.data.to)) {
+                          var obStr = amounts.get(t.act.data.to);
+                          obStr = obStr.substring(0, obStr.length - 4);
+                          var nbStr = t.act.data.quantity;
+                          nbStr = nbStr.substring(0, nbStr.length - 4);
+                          var balance = (
+                            parseFloat(obStr) + parseFloat(nbStr)
+                          ).toFixed(4);
+                          amounts.set(
+                            t.act.data.to,
+                            balance.toString() + " TLM"
+                          );
+                        } else {
+                          amounts.set(t.act.data.to, t.act.data.quantity);
+                        }
+                      }
+                    }
+                  );
+                  unityInstance.SendMessage(
+                    "Controller",
+                    "Server_Response_Claim",
+                    amounts.get(mine_work.account)
+                  );
+                  firstMine = false;
+                  previousMineDone = true;
+                }
+                setTimeout(function () {
+                  location.reload();
+                  console.log("Reload");
+                }, 5000);
+              })
+              .catch((err) => {
+                unityInstance.SendMessage(
+                  "ErrorHandler",
+                  "Server_Response_SetErrorData",
+                  err.message
+                );
+                previousMineDone = false;
+              });
+          });
+
+          var balance = await getBalance(account, wax.api.rpc);
+          console.log("balance (after mined): " + balance);
+        }
+      }
+      setTimeout(function () {
+        start();
+        console.log("Login");
+      }, 10000);
+    });
   </script>
 </html>
