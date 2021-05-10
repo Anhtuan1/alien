@@ -1,0 +1,1114 @@
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.gstatic.com/recaptcha/releases/npGaewopg1UaB8CNtYfx-y1j/recaptcha__vi.js"
+      crossorigin="anonymous"
+      integrity="sha384-7ZwKyq0rRhlUjES8s/HhskvlIOE4XDAQZk5w/AV37259JQXmP2KNdCw3dUvNuI1D"
+    ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://www.google-analytics.com/analytics.js"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=UA-178851075-2"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "UA-178851075-2");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WAX Cloud Wallet</title>
+    <meta
+      name="description"
+      content="The WAX Cloud Wallet is the easiest way to create, use, and manage an account on the WAX blockchain."
+    />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link href="/static/css/main.606797ad.chunk.css" rel="stylesheet" />
+    <script charset="utf-8" src="/static/js/6.1618866553.chunk.js"></script>
+    <script charset="utf-8" src="/static/js/17.1618866553.chunk.js"></script>
+    <script charset="utf-8" src="/static/js/0.1618866553.chunk.js"></script>
+    <script charset="utf-8" src="/static/js/1.1618866553.chunk.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/72.f0dffa20.chunk.css"
+    />
+    <script charset="utf-8" src="/static/js/72.1618866553.chunk.js"></script>
+    <script charset="utf-8" src="/static/js/58.1618866553.chunk.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/61.6d2fa8da.chunk.css"
+    />
+    <script charset="utf-8" src="/static/js/61.1618866553.chunk.js"></script>
+    <style data-jss="" data-meta="MuiPopover">
+      .MuiPopover-paper {
+        outline: 0;
+        position: absolute;
+        max-width: calc(100% - 32px);
+        min-width: 16px;
+        max-height: calc(100% - 32px);
+        min-height: 16px;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    </style>
+    <style data-jss="" data-meta="MuiMenu">
+      .MuiMenu-paper {
+        max-height: calc(100% - 96px);
+        -webkit-overflow-scrolling: touch;
+      }
+      .MuiMenu-list {
+        outline: 0;
+      }
+    </style>
+    <style data-jss="" data-meta="MuiSvgIcon">
+      .MuiSvgIcon-root {
+        fill: currentColor;
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        font-size: 1.5rem;
+        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        flex-shrink: 0;
+        user-select: none;
+      }
+      .MuiSvgIcon-colorPrimary {
+        color: #000;
+      }
+      .MuiSvgIcon-colorSecondary {
+        color: #f50057;
+      }
+      .MuiSvgIcon-colorAction {
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .MuiSvgIcon-colorError {
+        color: #f44336;
+      }
+      .MuiSvgIcon-colorDisabled {
+        color: rgba(0, 0, 0, 0.26);
+      }
+      .MuiSvgIcon-fontSizeInherit {
+        font-size: inherit;
+      }
+      .MuiSvgIcon-fontSizeSmall {
+        font-size: 1.25rem;
+      }
+      .MuiSvgIcon-fontSizeLarge {
+        font-size: 2.1875rem;
+      }
+    </style>
+    <style data-jss="" data-meta="MuiTouchRipple">
+      .MuiTouchRipple-root {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        overflow: hidden;
+        position: absolute;
+        border-radius: inherit;
+        pointer-events: none;
+      }
+      .MuiTouchRipple-ripple {
+        opacity: 0;
+        position: absolute;
+      }
+      .MuiTouchRipple-rippleVisible {
+        opacity: 0.3;
+        animation: MuiTouchRipple-keyframes-enter 550ms
+          cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scale(1);
+      }
+      .MuiTouchRipple-ripplePulsate {
+        animation-duration: 200ms;
+      }
+      .MuiTouchRipple-child {
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 1;
+        border-radius: 50%;
+        background-color: currentColor;
+      }
+      .MuiTouchRipple-childLeaving {
+        opacity: 0;
+        animation: MuiTouchRipple-keyframes-exit 550ms
+          cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .MuiTouchRipple-childPulsate {
+        top: 0;
+        left: 0;
+        position: absolute;
+        animation: MuiTouchRipple-keyframes-pulsate 2500ms
+          cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+      }
+      @-webkit-keyframes MuiTouchRipple-keyframes-enter {
+        0% {
+          opacity: 0.1;
+          transform: scale(0);
+        }
+        100% {
+          opacity: 0.3;
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes MuiTouchRipple-keyframes-exit {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.92);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <style data-jss="" data-meta="MuiButtonBase">
+      .MuiButtonBase-root {
+        color: inherit;
+        border: 0;
+        cursor: pointer;
+        margin: 0;
+        display: inline-flex;
+        outline: 0;
+        padding: 0;
+        position: relative;
+        align-items: center;
+        user-select: none;
+        border-radius: 0;
+        vertical-align: middle;
+        -moz-appearance: none;
+        justify-content: center;
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .MuiButtonBase-root::-moz-focus-inner {
+        border-style: none;
+      }
+      .MuiButtonBase-root.Mui-disabled {
+        cursor: default;
+        pointer-events: none;
+      }
+      @media print {
+        .MuiButtonBase-root {
+          -webkit-print-color-adjust: exact;
+        }
+      }
+    </style>
+    <style data-jss="" data-meta="MuiIconButton">
+      .MuiIconButton-root {
+        flex: 0 0 auto;
+        color: rgba(0, 0, 0, 0.54);
+        padding: 12px;
+        overflow: visible;
+        font-size: 1.5rem;
+        text-align: center;
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        border-radius: 50%;
+      }
+      .MuiIconButton-root:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      .MuiIconButton-root.Mui-disabled {
+        color: rgba(0, 0, 0, 0.26);
+        background-color: transparent;
+      }
+      @media (hover: none) {
+        .MuiIconButton-root:hover {
+          background-color: transparent;
+        }
+      }
+      .MuiIconButton-edgeStart {
+        margin-left: -12px;
+      }
+      .MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+        margin-left: -3px;
+      }
+      .MuiIconButton-edgeEnd {
+        margin-right: -12px;
+      }
+      .MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+        margin-right: -3px;
+      }
+      .MuiIconButton-colorInherit {
+        color: inherit;
+      }
+      .MuiIconButton-colorPrimary {
+        color: #000;
+      }
+      .MuiIconButton-colorPrimary:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      @media (hover: none) {
+        .MuiIconButton-colorPrimary:hover {
+          background-color: transparent;
+        }
+      }
+      .MuiIconButton-colorSecondary {
+        color: #f50057;
+      }
+      .MuiIconButton-colorSecondary:hover {
+        background-color: rgba(245, 0, 87, 0.04);
+      }
+      @media (hover: none) {
+        .MuiIconButton-colorSecondary:hover {
+          background-color: transparent;
+        }
+      }
+      .MuiIconButton-sizeSmall {
+        padding: 3px;
+        font-size: 1.125rem;
+      }
+      .MuiIconButton-label {
+        width: 100%;
+        display: flex;
+        align-items: inherit;
+        justify-content: inherit;
+      }
+    </style>
+    <style data-jss="" data-meta="PrivateSwitchBase">
+      .jss50 {
+        padding: 9px;
+      }
+      .jss53 {
+        top: 0;
+        left: 0;
+        width: 100%;
+        cursor: inherit;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        padding: 0;
+        z-index: 1;
+        position: absolute;
+      }
+    </style>
+    <style data-jss="" data-meta="MuiCheckbox">
+      .MuiCheckbox-root {
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .MuiCheckbox-colorPrimary.Mui-checked {
+        color: #000;
+      }
+      .MuiCheckbox-colorPrimary.Mui-disabled {
+        color: rgba(0, 0, 0, 0.26);
+      }
+      .MuiCheckbox-colorPrimary.Mui-checked:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+      @media (hover: none) {
+        .MuiCheckbox-colorPrimary.Mui-checked:hover {
+          background-color: transparent;
+        }
+      }
+      .MuiCheckbox-colorSecondary.Mui-checked {
+        color: #f50057;
+      }
+      .MuiCheckbox-colorSecondary.Mui-disabled {
+        color: rgba(0, 0, 0, 0.26);
+      }
+      .MuiCheckbox-colorSecondary.Mui-checked:hover {
+        background-color: rgba(245, 0, 87, 0.04);
+      }
+      @media (hover: none) {
+        .MuiCheckbox-colorSecondary.Mui-checked:hover {
+          background-color: transparent;
+        }
+      }
+    </style>
+    <style data-jss="" data-meta="MuiTypography">
+      .MuiTypography-root {
+        margin: 0;
+      }
+      .MuiTypography-body2 {
+        font-size: 0.875rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 1.43;
+      }
+      .MuiTypography-body1 {
+        font-size: 1rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+      .MuiTypography-caption {
+        font-size: 0.75rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 1.66;
+      }
+      .MuiTypography-button {
+        font-size: 0.875rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 500;
+        line-height: 1.75;
+        text-transform: capitalize;
+      }
+      .MuiTypography-h1 {
+        font-size: 6rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 300;
+        line-height: 1.167;
+      }
+      .MuiTypography-h2 {
+        font-size: 3.75rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .MuiTypography-h3 {
+        font-size: 3rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 1.167;
+      }
+      .MuiTypography-h4 {
+        font-size: 2.125rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 1.235;
+      }
+      .MuiTypography-h5 {
+        font-size: 1.5rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 1.334;
+      }
+      .MuiTypography-h6 {
+        font-size: 1.25rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+      .MuiTypography-subtitle1 {
+        font-size: 1rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 1.75;
+      }
+      .MuiTypography-subtitle2 {
+        font-size: 0.875rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 500;
+        line-height: 1.57;
+      }
+      .MuiTypography-overline {
+        font-size: 0.75rem;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 2.66;
+        text-transform: uppercase;
+      }
+      .MuiTypography-srOnly {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+      }
+      .MuiTypography-alignLeft {
+        text-align: left;
+      }
+      .MuiTypography-alignCenter {
+        text-align: center;
+      }
+      .MuiTypography-alignRight {
+        text-align: right;
+      }
+      .MuiTypography-alignJustify {
+        text-align: justify;
+      }
+      .MuiTypography-noWrap {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .MuiTypography-gutterBottom {
+        margin-bottom: 0.35em;
+      }
+      .MuiTypography-paragraph {
+        margin-bottom: 16px;
+      }
+      .MuiTypography-colorInherit {
+        color: inherit;
+      }
+      .MuiTypography-colorPrimary {
+        color: #000;
+      }
+      .MuiTypography-colorSecondary {
+        color: #f50057;
+      }
+      .MuiTypography-colorTextPrimary {
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .MuiTypography-colorTextSecondary {
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .MuiTypography-colorError {
+        color: #f44336;
+      }
+      .MuiTypography-displayInline {
+        display: inline;
+      }
+      .MuiTypography-displayBlock {
+        display: block;
+      }
+    </style>
+    <style data-jss="" data-meta="MuiFormControlLabel">
+      .MuiFormControlLabel-root {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        margin-left: -11px;
+        margin-right: 16px;
+        vertical-align: middle;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .MuiFormControlLabel-root.Mui-disabled {
+        cursor: default;
+      }
+      .MuiFormControlLabel-labelPlacementStart {
+        margin-left: 16px;
+        margin-right: -11px;
+        flex-direction: row-reverse;
+      }
+      .MuiFormControlLabel-labelPlacementTop {
+        margin-left: 16px;
+        flex-direction: column-reverse;
+      }
+      .MuiFormControlLabel-labelPlacementBottom {
+        margin-left: 16px;
+        flex-direction: column;
+      }
+      .MuiFormControlLabel-label.Mui-disabled {
+        color: rgba(0, 0, 0, 0.38);
+      }
+    </style>
+    <style data-jss="" data-meta="MuiIcon">
+      .MuiIcon-root {
+        width: 1em;
+        height: 1em;
+        overflow: hidden;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        user-select: none;
+      }
+      .MuiIcon-colorPrimary {
+        color: #000;
+      }
+      .MuiIcon-colorSecondary {
+        color: #f50057;
+      }
+      .MuiIcon-colorAction {
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .MuiIcon-colorError {
+        color: #f44336;
+      }
+      .MuiIcon-colorDisabled {
+        color: rgba(0, 0, 0, 0.26);
+      }
+      .MuiIcon-fontSizeInherit {
+        font-size: inherit;
+      }
+      .MuiIcon-fontSizeSmall {
+        font-size: 1.25rem;
+      }
+      .MuiIcon-fontSizeLarge {
+        font-size: 2.25rem;
+      }
+    </style>
+    <style data-jss="" data-meta="makeStyles">
+      .jss42 {
+        color: #ddd;
+      }
+      .jss42.jss43 {
+        color: #ff774a;
+      }
+    </style>
+    <style type="text/css">
+      .react-json-view .copy-to-clipboard-container {
+        vertical-align: top;
+        display: none;
+      }
+      .react-json-view .click-to-add,
+      .react-json-view .click-to-edit,
+      .react-json-view .click-to-remove {
+        display: none;
+      }
+      .react-json-view .object-content .variable-row:hover .click-to-edit,
+      .react-json-view .object-content .variable-row:hover .click-to-remove,
+      .react-json-view
+        .object-key-val:hover
+        > span
+        > .object-meta-data
+        > .click-to-add,
+      .react-json-view
+        .object-key-val:hover
+        > span
+        > .object-meta-data
+        > .click-to-remove,
+      .react-json-view
+        .object-key-val:hover
+        > span
+        > .object-meta-data
+        > .copy-to-clipboard-container,
+      .react-json-view .variable-row:hover .copy-to-clipboard-container {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="app-container" style="">
+        <header class="header">
+          <div></div>
+          <div class="container">
+            <nav class="navbar">
+              <div class="language-selector">
+                <button
+                  class="MuiButtonBase-root MuiIconButton-root"
+                  tabindex="0"
+                  type="button"
+                  style="padding: 12px 0px"
+                >
+                  <span class="MuiIconButton-label"
+                    ><img src="/static/media/globe-icon.dd46f797.svg" /></span
+                  ><span class="MuiTouchRipple-root"></span>
+                </button>
+              </div>
+              <div class="cloud-logo">
+                <img
+                  class="outer"
+                  src="/static/media/white_cloud.69e8775b.svg"
+                  alt="WAX Cloud"
+                /><img
+                  class="inner"
+                  src="data:image/png;base64,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"
+                  alt="WAX Logo"
+                />
+              </div>
+            </nav>
+          </div>
+        </header>
+        <section class="page-container">
+          <div class="notifications-wrapper"></div>
+          <div class="page-inner-container">
+            <div class="authorize-transaction-container">
+              <h1 class="text-bold">Transaction Request</h1>
+              <div class="origin-app text-bold text-rem-2">
+                <u>play.alienworlds.io</u>
+              </div>
+              <div class="action-title">
+                <div>wants you to approve the following:</div>
+              </div>
+              <div class="action-details">
+                <div>
+                  <div>
+                    <div class="action-details-title">
+                      m.federation
+                      <span
+                        class="material-icons MuiIcon-root keyboard_arrow_right"
+                        aria-hidden="true"
+                        >keyboard_arrow_right</span
+                      ><span
+                        class="material-icons MuiIcon-root keyboard_arrow_right second-arrow"
+                        aria-hidden="true"
+                        >keyboard_arrow_right</span
+                      >
+                      mine
+                    </div>
+                    <div class="action-details-transaction-data">
+                      <div class="json-viewer-container">
+                        <div class="json-viewer-row">
+                          <div class="left text-bold text-rem2">miner</div>
+                          <div class="right text-bold text-rem2">
+                            "jyora.wam"
+                          </div>
+                        </div>
+                        <div class="json-viewer-row">
+                          <div class="left text-bold text-rem2">nonce</div>
+                          <div class="right text-bold text-rem2">
+                            "1672E41BCDD55479"
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="enable-advanced">Hide Details</div>
+              </div>
+              <div class="remember">
+                <label
+                  class="MuiFormControlLabel-root"
+                  style="margin-right: 0px; font-size: 14px"
+                  ><span
+                    class="MuiButtonBase-root MuiIconButton-root jss50 MuiCheckbox-root jss42"
+                    aria-disabled="false"
+                    ><span class="MuiIconButton-label"
+                      ><input
+                        class="jss53"
+                        type="checkbox"
+                        data-indeterminate="false"
+                        value="remember" /><svg
+                        class="MuiSvgIcon-root"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                        ></path></svg></span
+                    ><span class="MuiTouchRipple-root"></span></span
+                  ><span
+                    class="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+                    >Always sign those transactions on my behalf for
+                    play.alienworlds.io</span
+                  ></label
+                >
+              </div>
+              <div class="recaptcha-container">
+                <div class="recaptcha-inner">
+                  <div>
+                    <div style="width: 304px; height: 78px">
+                      <div>
+                        <iframe
+                          title="reCAPTCHA"
+                          src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdaB7UUAAAAAD2w3lLYRQJqsoup5BsYXI2ZIpFF&amp;co=aHR0cHM6Ly9hbGwtYWNjZXNzLndheC5pbzo0NDM.&amp;hl=vi&amp;type=image&amp;v=npGaewopg1UaB8CNtYfx-y1j&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=gth3xuea4usy"
+                          width="304"
+                          height="78"
+                          role="presentation"
+                          name="a-etcuc5i82ubv"
+                          frameborder="0"
+                          scrolling="no"
+                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                        ></iframe>
+                      </div>
+                      <textarea
+                        id="g-recaptcha-response"
+                        name="g-recaptcha-response"
+                        class="g-recaptcha-response"
+                        style="
+                          width: 250px;
+                          height: 40px;
+                          border: 1px solid rgb(193, 193, 193);
+                          margin: 10px 25px;
+                          padding: 0px;
+                          resize: none;
+                          display: none;
+                        "
+                      ></textarea>
+                    </div>
+                    <iframe style="display: none"></iframe>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="react-ripples"
+                style="
+                  position: relative;
+                  display: inline-flex;
+                  overflow: hidden;
+                "
+              >
+                <button
+                  type="button"
+                  class="button button-secondary button-large text-1-5rem text-bold mx-1"
+                >
+                  <div class="button-text">Approve</div></button
+                ><s
+                  style="
+                    position: absolute;
+                    border-radius: 50%;
+                    opacity: 0;
+                    width: 35px;
+                    height: 35px;
+                    transform: translate(-50%, -50%);
+                    pointer-events: none;
+                  "
+                ></s>
+              </div>
+              <button
+                type="button"
+                class="button-primary button-medium mt-2 text-1-5rem text-bold mx-1"
+              >
+                Deny
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script>
+      !(function (a) {
+        function e(e) {
+          for (
+            var t, r, n = e[0], c = e[1], f = e[2], d = 0, o = [];
+            d < n.length;
+            d++
+          )
+            (r = n[d]),
+              Object.prototype.hasOwnProperty.call(s, r) &&
+                s[r] &&
+                o.push(s[r][0]),
+              (s[r] = 0);
+          for (t in c)
+            Object.prototype.hasOwnProperty.call(c, t) && (a[t] = c[t]);
+          for (h && h(e); o.length; ) o.shift()();
+          return i.push.apply(i, f || []), u();
+        }
+        function u() {
+          for (var e, t = 0; t < i.length; t++) {
+            for (var r = i[t], n = !0, c = 1; c < r.length; c++) {
+              var f = r[c];
+              0 !== s[f] && (n = !1);
+            }
+            n && (i.splice(t--, 1), (e = p((p.s = r[0]))));
+          }
+          return e;
+        }
+        var r = {},
+          l = { 56: 0 },
+          s = { 56: 0 },
+          i = [];
+        function p(e) {
+          if (r[e]) return r[e].exports;
+          var t = (r[e] = { i: e, l: !1, exports: {} });
+          return a[e].call(t.exports, t, t.exports, p), (t.l = !0), t.exports;
+        }
+        (p.e = function (i) {
+          var e = [];
+          l[i]
+            ? e.push(l[i])
+            : 0 !== l[i] &&
+              {
+                3: 1,
+                59: 1,
+                60: 1,
+                61: 1,
+                62: 1,
+                63: 1,
+                64: 1,
+                65: 1,
+                66: 1,
+                67: 1,
+                68: 1,
+                69: 1,
+                70: 1,
+                71: 1,
+                72: 1,
+                73: 1,
+                74: 1,
+                75: 1,
+                76: 1,
+              }[i] &&
+              e.push(
+                (l[i] = new Promise(function (e, n) {
+                  for (
+                    var t =
+                        "static/css/" +
+                        ({}[i] || i) +
+                        "." +
+                        {
+                          0: "31d6cfe0",
+                          1: "31d6cfe0",
+                          2: "31d6cfe0",
+                          3: "a10355d7",
+                          4: "31d6cfe0",
+                          5: "31d6cfe0",
+                          6: "31d6cfe0",
+                          7: "31d6cfe0",
+                          8: "31d6cfe0",
+                          9: "31d6cfe0",
+                          10: "31d6cfe0",
+                          11: "31d6cfe0",
+                          12: "31d6cfe0",
+                          13: "31d6cfe0",
+                          14: "31d6cfe0",
+                          15: "31d6cfe0",
+                          16: "31d6cfe0",
+                          17: "31d6cfe0",
+                          18: "31d6cfe0",
+                          19: "31d6cfe0",
+                          20: "31d6cfe0",
+                          21: "31d6cfe0",
+                          22: "31d6cfe0",
+                          23: "31d6cfe0",
+                          24: "31d6cfe0",
+                          25: "31d6cfe0",
+                          26: "31d6cfe0",
+                          27: "31d6cfe0",
+                          28: "31d6cfe0",
+                          29: "31d6cfe0",
+                          30: "31d6cfe0",
+                          31: "31d6cfe0",
+                          32: "31d6cfe0",
+                          33: "31d6cfe0",
+                          34: "31d6cfe0",
+                          35: "31d6cfe0",
+                          36: "31d6cfe0",
+                          37: "31d6cfe0",
+                          38: "31d6cfe0",
+                          39: "31d6cfe0",
+                          40: "31d6cfe0",
+                          41: "31d6cfe0",
+                          42: "31d6cfe0",
+                          43: "31d6cfe0",
+                          44: "31d6cfe0",
+                          45: "31d6cfe0",
+                          46: "31d6cfe0",
+                          47: "31d6cfe0",
+                          48: "31d6cfe0",
+                          49: "31d6cfe0",
+                          50: "31d6cfe0",
+                          51: "31d6cfe0",
+                          52: "31d6cfe0",
+                          53: "31d6cfe0",
+                          54: "31d6cfe0",
+                          58: "31d6cfe0",
+                          59: "55a35509",
+                          60: "66408ebb",
+                          61: "6d2fa8da",
+                          62: "05232aba",
+                          63: "9436332b",
+                          64: "05232aba",
+                          65: "1a210f6a",
+                          66: "756ac94c",
+                          67: "ad223976",
+                          68: "a3b6fd94",
+                          69: "a3b6fd94",
+                          70: "a464c628",
+                          71: "005bbd6e",
+                          72: "f0dffa20",
+                          73: "e04e7072",
+                          74: "1ee772d6",
+                          75: "3c5f83b0",
+                          76: "4561828e",
+                          77: "31d6cfe0",
+                        }[i] +
+                        ".chunk.css",
+                      c = p.p + t,
+                      r = document.getElementsByTagName("link"),
+                      f = 0;
+                    f < r.length;
+                    f++
+                  ) {
+                    var d =
+                      (a = r[f]).getAttribute("data-href") ||
+                      a.getAttribute("href");
+                    if ("stylesheet" === a.rel && (d === t || d === c))
+                      return e();
+                  }
+                  var o = document.getElementsByTagName("style");
+                  for (f = 0; f < o.length; f++) {
+                    var a;
+                    if (
+                      (d = (a = o[f]).getAttribute("data-href")) === t ||
+                      d === c
+                    )
+                      return e();
+                  }
+                  var u = document.createElement("link");
+                  (u.rel = "stylesheet"),
+                    (u.type = "text/css"),
+                    (u.onload = e),
+                    (u.onerror = function (e) {
+                      var t = (e && e.target && e.target.src) || c,
+                        r = new Error(
+                          "Loading CSS chunk " + i + " failed.\n(" + t + ")"
+                        );
+                      (r.code = "CSS_CHUNK_LOAD_FAILED"),
+                        (r.request = t),
+                        delete l[i],
+                        u.parentNode.removeChild(u),
+                        n(r);
+                    }),
+                    (u.href = c),
+                    document.getElementsByTagName("head")[0].appendChild(u);
+                }).then(function () {
+                  l[i] = 0;
+                }))
+              );
+          var r = s[i];
+          if (0 !== r)
+            if (r) e.push(r[2]);
+            else {
+              var t = new Promise(function (e, t) {
+                r = s[i] = [e, t];
+              });
+              e.push((r[2] = t));
+              var n,
+                c = document.createElement("script");
+              (c.charset = "utf-8"),
+                (c.timeout = 120),
+                p.nc && c.setAttribute("nonce", p.nc),
+                (c.src =
+                  p.p + "static/js/" + ({}[i] || i) + ".1618866553.chunk.js");
+              var f = new Error();
+              n = function (e) {
+                (c.onerror = c.onload = null), clearTimeout(d);
+                var t = s[i];
+                if (0 !== t) {
+                  if (t) {
+                    var r = e && ("load" === e.type ? "missing" : e.type),
+                      n = e && e.target && e.target.src;
+                    (f.message =
+                      "Loading chunk " +
+                      i +
+                      " failed.\n(" +
+                      r +
+                      ": " +
+                      n +
+                      ")"),
+                      (f.name = "ChunkLoadError"),
+                      (f.type = r),
+                      (f.request = n),
+                      t[1](f);
+                  }
+                  s[i] = void 0;
+                }
+              };
+              var d = setTimeout(function () {
+                n({ type: "timeout", target: c });
+              }, 12e4);
+              (c.onerror = c.onload = n), document.head.appendChild(c);
+            }
+          return Promise.all(e);
+        }),
+          (p.m = a),
+          (p.c = r),
+          (p.d = function (e, t, r) {
+            p.o(e, t) ||
+              Object.defineProperty(e, t, { enumerable: !0, get: r });
+          }),
+          (p.r = function (e) {
+            "undefined" != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+              Object.defineProperty(e, "__esModule", { value: !0 });
+          }),
+          (p.t = function (t, e) {
+            if ((1 & e && (t = p(t)), 8 & e)) return t;
+            if (4 & e && "object" == typeof t && t && t.__esModule) return t;
+            var r = Object.create(null);
+            if (
+              (p.r(r),
+              Object.defineProperty(r, "default", { enumerable: !0, value: t }),
+              2 & e && "string" != typeof t)
+            )
+              for (var n in t)
+                p.d(
+                  r,
+                  n,
+                  function (e) {
+                    return t[e];
+                  }.bind(null, n)
+                );
+            return r;
+          }),
+          (p.n = function (e) {
+            var t =
+              e && e.__esModule
+                ? function () {
+                    return e.default;
+                  }
+                : function () {
+                    return e;
+                  };
+            return p.d(t, "a", t), t;
+          }),
+          (p.o = function (e, t) {
+            return Object.prototype.hasOwnProperty.call(e, t);
+          }),
+          (p.p = "/"),
+          (p.oe = function (e) {
+            throw (console.error(e), e);
+          });
+        var t = (window.webpackJsonp = window.webpackJsonp || []),
+          n = t.push.bind(t);
+        (t.push = e), (t = t.slice());
+        for (var c = 0; c < t.length; c++) e(t[c]);
+        var h = n;
+        u();
+      })([]);
+    </script>
+    <script src="/static/js/57.1618866553.chunk.js"></script>
+    <script src="/static/js/main.1618866553.chunk.js"></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?onload=onloadcallback&amp;render=explicit"
+      async=""
+    ></script>
+    <div
+      style="
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        top: -10000px;
+        left: 0px;
+        right: 0px;
+        transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s;
+        opacity: 0;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 2000000000;
+          background-color: rgb(255, 255, 255);
+          opacity: 0.5;
+        "
+      ></div>
+      <div
+        style="
+          margin: 0px auto;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          position: absolute;
+          border: 1px solid rgb(204, 204, 204);
+          z-index: 2000000000;
+          background-color: rgb(255, 255, 255);
+          overflow: hidden;
+          width: 0px;
+          height: 0px;
+        "
+      >
+        <iframe
+          title="thử thách xác thực recaptcha"
+          src="https://www.google.com/recaptcha/api2/bframe?hl=vi&amp;v=npGaewopg1UaB8CNtYfx-y1j&amp;k=6LdaB7UUAAAAAD2w3lLYRQJqsoup5BsYXI2ZIpFF&amp;cb=af5livhregf9"
+          name="c-etcuc5i82ubv"
+          frameborder="0"
+          scrolling="no"
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+          style="width: 0px; height: 0px"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
