@@ -1,16 +1,19 @@
 # alien
 python -m CGIHTTPServer 8360
 #Domain: all-access.wax.io/cloud-wallet/signing/
+```javascript
   setInterval(function () {
-        if (window.location.pathname.indexOf("cloud-wallet/signing") != -1) {
+      if (window.location.pathname.indexOf("cloud-wallet/signing") != -1) {
         if (grecaptcha.getResponse().length) {
             document.querySelector(".react-ripples").classList.remove("disabled");
             document.querySelector(".react-ripples button").disabled = false;
             document.querySelector(".react-ripples button").click();
         }
-        }
-    }, 4000);
+      }
+  }, 4000);
+``` 
 #Domain: play.alienworlds.io
+```javascript
    window.addEventListener("load", (event) => {
       async function start() {
         const delay = (millis) =>
@@ -136,3 +139,4 @@ python -m CGIHTTPServer 8360
         console.log("Login");
       }, 25000);
     });
+``` 
