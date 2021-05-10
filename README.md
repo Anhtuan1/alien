@@ -1,6 +1,6 @@
 # alien
 python -m CGIHTTPServer 8360
-#Domain: all-access.wax.io/cloud-wallet/signing/
+#Domain: all-access.wax.io
 ```javascript
 window.addEventListener("load", (event) => {
   setInterval(function () {
