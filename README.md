@@ -2,6 +2,7 @@
 python -m CGIHTTPServer 8360
 #Domain: all-access.wax.io/cloud-wallet/signing/
 ```javascript
+window.addEventListener("load", (event) => {
   setInterval(function () {
       if (window.location.pathname.indexOf("cloud-wallet/signing") != -1) {
         if (grecaptcha.getResponse().length) {
@@ -11,6 +12,7 @@ python -m CGIHTTPServer 8360
         }
       }
   }, 4000);
+ })
 ``` 
 #Domain: play.alienworlds.io
 ```javascript
@@ -131,7 +133,7 @@ python -m CGIHTTPServer 8360
 
           var balance = await getBalance(account, wax.api.rpc);
           console.log("balance (after mined): " + balance);
-          await delay(50000);
+          await delay(70000);
         }
       }
       setTimeout(function () {
