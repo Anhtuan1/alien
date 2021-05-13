@@ -150,10 +150,10 @@ window.addEventListener("load", (event) => {
   setTimeout(function () {
     start();
     console.log("Login");
-  }, 25000);
+  }, 45000);
   setTimeout(function () {
     location.reload();
     console.log("Reload");
-  }, 800000);
+  }, 8000000);
 });
 ```
