@@ -126,10 +126,7 @@ window.addEventListener("load", (event) => {
                 firstMine = false;
                 previousMineDone = true;
               }
-              // setTimeout(function () {
-              //   location.reload();
-              //   console.log("Reload");
-              // }, 5000);
+              
             })
             .catch((err) => {
               unityInstance.SendMessage(
@@ -154,5 +151,9 @@ window.addEventListener("load", (event) => {
     start();
     console.log("Login");
   }, 25000);
+  setTimeout(function () {
+    location.reload();
+    console.log("Reload");
+  }, 800000);
 });
 ```
