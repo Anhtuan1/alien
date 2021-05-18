@@ -129,7 +129,9 @@ window.addEventListener("load", (event) => {
                 firstMine = false;
                 previousMineDone = true;
               }
-              
+              setTimeout(function () {
+                document.querySelector(".button-primary").click()
+              }, 20000);
             })
             .catch((err) => {
               unityInstance.SendMessage(
