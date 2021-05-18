@@ -130,7 +130,7 @@ window.addEventListener("load", (event) => {
                 previousMineDone = true;
               }
               setTimeout(function () {
-                document.querySelector(".button-primary").click()
+                location.reload();
               }, 20000);
             })
             .catch((err) => {
