@@ -14,6 +14,9 @@ python -m CGIHTTPServer 8360
       }
     }
   }, 3000);
+  setTimeout(function () {
+    document.querySelector(".button-primary").click()
+  }, 150000);
 
 ```
 
@@ -126,10 +129,7 @@ window.addEventListener("load", (event) => {
                 firstMine = false;
                 previousMineDone = true;
               }
-              setTimeout(function () {
-                location.reload();
-                console.log("Reload");
-              }, 15000);
+              
             })
             .catch((err) => {
               unityInstance.SendMessage(
@@ -157,6 +157,6 @@ window.addEventListener("load", (event) => {
   setTimeout(function () {
     location.reload();
     console.log("Reload");
-  }, 8000000);
+  }, 7000000);
 });
 ```
