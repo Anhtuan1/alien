@@ -23,7 +23,11 @@ python -m CGIHTTPServer 8360
 #Domain: play.alienworlds.io
 
 ```javascript
+
 window.addEventListener("load", (event) => {
+window.alert = function(){
+return true;
+}
   async function start() {
     const delay = (millis) =>
       new Promise((resolve, reject) => {
@@ -44,7 +48,7 @@ window.addEventListener("load", (event) => {
       var minedelay = 1;
       do {
         minedelay = await getMineDelay(account);
-        await delay(minedelay);
+        await delay(minedelay*2);
       } while (minedelay !== 0 && (previousMineDone || firstMine));
       console.log("just mine it!");
       var xmlHttp = new XMLHttpRequest();
@@ -161,4 +165,5 @@ window.addEventListener("load", (event) => {
     console.log("Reload");
   }, 7000000);
 });
+
 ```
