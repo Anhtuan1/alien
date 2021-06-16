@@ -8,18 +8,33 @@ all-access.wax.io
 ```
 ```javascript
 
+ 
   setInterval(function () {
     if (window.location.pathname.indexOf("cloud-wallet/signing") != -1) {
-      //if (grecaptcha.getResponse().length) {
+      
         document.querySelector(".react-ripples").classList.remove("disabled");
         document.querySelector(".react-ripples button").disabled = false;
         document.querySelector(".react-ripples button").click();
-      //}
+      
     }
   }, 3000);
+   setInterval(function () {
+    if (window.location.pathname.indexOf("cloud-wallet/login") != -1) {
+        document.querySelector(".react-ripples button").click();
+    }
+  }, 25000);
+ setInterval(function () {
+
+        if( document.getElementById("google-social-btn")){
+document.getElementById("google-social-btn").click();
+        }
+    
+  }, 35000);
   setTimeout(function () {
     document.querySelector(".button-primary").click()
   }, 150000);
+
+
 
 ```
 
@@ -28,6 +43,7 @@ all-access.wax.io
 play.alienworlds.io
 ```
 ```javascript
+
 
 window.addEventListener("load", (event) => {
 window.alert = function(){
@@ -55,20 +71,7 @@ return true;
         minedelay = await getMineDelay(account);
         await delay(minedelay*2);
       } while (minedelay !== 0 && (previousMineDone || firstMine));
-      console.log("just mine it!");
-      var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open(
-        "GET",
-        "https://wax.eosrio.io/v2/state/get_account?account=" + userAccount,
-        false
-      ); // false for synchronous request
-      xmlHttp.send(null);
-      var get_user = JSON.parse(xmlHttp.responseText);
-      //var last_action = get_user['actions'][get_user['actions'].length-1];
-      if (
-        get_user.account.cpu_limit &&
-        get_user.account.cpu_limit.available > 600
-      ) {
+      
         console.log("OK MINE");
         var balance = await getBalance(account, wax.api.rpc);
         console.log("balance: (before mine)" + balance);
@@ -154,9 +157,7 @@ return true;
 
         var balance = await getBalance(account, wax.api.rpc);
         console.log("balance (after mined): " + balance);
-      } else {
-        console.log(get_user);
-      }
+     
 
       await delay(70000);
     }
@@ -170,5 +171,6 @@ return true;
     console.log("Reload");
   }, 7000000);
 });
+
 
 ```
